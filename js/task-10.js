@@ -39,22 +39,20 @@ const divBoxEl = document.querySelector("#boxes")
 console.log(divBoxEl);
 const inputEl = document.querySelector("input");
 console.dir(inputEl);
-let amount = Number(inputEl.textContent);
+const amount = inputEl.value;
 console.log(amount);
 const createBtn = document.querySelector(".create");
 console.log(createBtn);
-const destroyBtn = document.querySelector(".destro");
-console.log(createBtn);
+const destroyBtn = document.querySelector(".destroy");
+console.log(destroyBtn);
 
 createBtn.addEventListener('click', createBoxes)
 
 
-function createBoxes(amount) {
-
-  for (let i = 1; i <= amount; i += 1){
-    markup += `<div class="js-item">${i}</div>`
+function createBoxes() {
+  for (let i = 1; i <= 5; i += 1){
+    return markup += `<div class="js-item">${i}</div>`
 }}
 
-// console.log(markup);
-// list.insertAdjacentHTML('beforeend', markup)
-// console.log('after', listDynemic[listDynemic.length - 1].textContent);//показує останній елемент в списку після додавання нових елем
+console.log(markup);
+divBoxEl.insertAdjacentHTML("afterbegin", markup)
