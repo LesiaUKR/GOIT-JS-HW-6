@@ -20,7 +20,7 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
-Створи функцію destroyBoxes(), яка очищає вміст div#boxes, у такий спосіб видаляючи всі створені елементи.
+Створи функцію +(), яка очищає вміст div#boxes, у такий спосіб видаляючи всі створені елементи.
 
 
 function getRandomHexColor() {
@@ -38,27 +38,33 @@ const divBoxEl = document.querySelector("#boxes")
 console.log(divBoxEl);
 const inputEl = document.querySelector("input");
 console.dir(inputEl);
-const amount = inputEl.value;
-console.log(amount);
-const createBtn = document.querySelector(".create");
+const createBtn = document.querySelector("[data-create]");
 console.log(createBtn);
-const destroyBtn = document.querySelector(".destroy");
+const destroyBtn = document.querySelector("[data-destroy]");
 console.log(destroyBtn);
 
-createBtn.addEventListener('click', createBoxes)
+createBtn.addEventListener('click', createBoxes);
+destroyBtn.addEventListener('click', destroyBoxes);
 
-let markup = '';
+
+let markup = "";
 let size = "10px";
+const amount = inputEl.value;
 
 function createBoxes(amount) {
   for (let i = 1; i <= amount; i += 1){
     markup += `<div 
-    class = "js-item"
-    width = 30px + ${size}
-    height = 30px + ${size}
-    backgroundColor = getRandomHexColor()>
+    style = "backgroundColor = ${getRandomHexColor()};
+    width = '30px + ${size}';
+    height = '30px + ${size}';">
     ${i}</div>`
-  }}
-
+  }
 console.log(markup);
+}
+
 divBoxEl.insertAdjacentHTML("afterbegin", markup);
+
+function destroyBoxes() {
+  divBoxEl.innerHTML = "";
+ console.log("це видалення колекції div");
+}
