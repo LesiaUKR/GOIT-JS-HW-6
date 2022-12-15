@@ -4,16 +4,12 @@
 <h1>Hello, <span id="name-output">Anonymous</span>!</h1>
 */
 
-const inputEl = document.querySelector('#name-input'); //отримуємо нашу кнопку
-const titleEl = document.querySelector('#name-output');//отримуємо наш заголовок
-// console.log(inputEl);
-// console.log(titleEl);
+const inputEl = document.querySelector('#name-input');
+const titleEl = document.querySelector('#name-output');
 
 inputEl.addEventListener('input', onInputChange);
 
 function onInputChange(event) {
-
-//   console.log(event.currentTarget.value);
     titleEl.textContent = event.currentTarget.value;
     if(inputEl.value === ""){
            return titleEl.textContent = "Anonymous";

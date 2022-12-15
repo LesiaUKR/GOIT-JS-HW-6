@@ -34,3 +34,7 @@ const markup = images.map(({
 
 console.dir(markup);
 list.insertAdjacentHTML("beforeend", markup)
+list.style.display = "flex";
+list.style.gap = "20px";
+list.style.justifyContent = "center";
+list.style.listStyle = "none";

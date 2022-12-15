@@ -14,45 +14,11 @@ Elements: 3
 Category: Technologies
 Elements: 5
 */
-// const countItems = document.getElementsByTagName("li.item li");
-// console.log(countItems);
 
-const navCategoriesElLquanity = document.querySelectorAll('li.item').length;
-console.log('Number of categories:', navCategoriesElLquanity);
-
-const navCategoriesEl = document.querySelectorAll('li.item ul');
-// console.log('Number of categories:', navCategoriesEl);
+const navCategoriesEl = document.querySelectorAll('li.item');
+console.log('Number of categories:', navCategoriesEl.length);
 
 navCategoriesEl.forEach(function (item) {
-    console.log('Elements:', item.childElementCount);
+    console.log('Category:', item.firstElementChild.textContent);
+    console.log('Elements:', item.lastElementChild.childElementCount);
 })
-
-
-// const navCategoriesChildren = navCategoriesEl.Children;
-// console.log(navCategoriesChildren);
-
-const categoriesTitle = document.querySelectorAll('h2');
-// console.log(categoriesTitle);
-
-categoriesTitle.forEach(function (item) {
-    console.log('Category:', item.textContent);
-})
-
-
-// const animalsTitleEl = document.querySelector('h2').textContent;
-// console.log('Category:', animalsTitleEl);
-
-// const animalsLinksEl = document.querySelectorAll('li.item');
-// console.log('Elements:', animalsLinksEl);
-
-// const productsTitleEl = document.querySelector('h2').textContent;
-// console.log('Category:', productsTitleEl);
-
-// const productsLinksEl = document.querySelectorAll('.js-item__products').length;
-// console.log('Elements:', productsLinksEl);
-
-// const technologiesTitleEl = document.querySelector('h2').textContent;
-// console.log('Category:', technologiesTitleEl);
-
-// const technologiesLinksEl = document.querySelectorAll('.js-item__technologies').length;
-// console.log('Elements:', technologiesLinksEl);

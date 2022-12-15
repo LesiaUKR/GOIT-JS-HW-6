@@ -19,9 +19,6 @@ console.log(incrementBtn);
 const valueEl = document.querySelector('#value')
 console.log(valueEl);
 
-
-// const addListenerBtn = document.querySelector('.js-add-listener');
-// const removeListenerBtn = document.querySelector('.js-remove-listener');
 let counterValue = 0;
 
 decrementBtn.addEventListener('click', () => {

@@ -26,9 +26,9 @@ form.addEventListener('submit', onFormSubmit)
 
 function onFormSubmit(event) {
   event.preventDefault();
-  console.log('це сабміт форми')
+
   const formElements = event.currentTarget.elements;
-  // console.log(formElements);
+  
    if (formElements.email.value == "" ||formElements.password.value == "") {
     return alert('всі поля повинні бути заповнені');
    } else {

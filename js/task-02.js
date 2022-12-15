@@ -19,17 +19,6 @@ const ingredients = [
   'Condiments',
 ];
 
-/*Перший спосіб*/
-// const markup = ingredients.map((item) => `<li class="item">${item}</li>`).join('')
-// console.log(markup);
-
-// const navEl = document.querySelector('ul#ingredients');
-// console.dir(navEl);
-
-// navEl.insertAdjacentHTML("afterbegin", markup);
-
-/*Другий спосіб*/
-
 const navEl = document.querySelector('ul#ingredients');
 console.dir(navEl);
 

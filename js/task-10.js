@@ -34,7 +34,6 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
-let markup = '';
 const divBoxEl = document.querySelector("#boxes")
 console.log(divBoxEl);
 const inputEl = document.querySelector("input");
@@ -48,11 +47,18 @@ console.log(destroyBtn);
 
 createBtn.addEventListener('click', createBoxes)
 
+let markup = '';
+let size = "10px";
 
-function createBoxes() {
-  for (let i = 1; i <= 5; i += 1){
-    return markup += `<div class="js-item">${i}</div>`
-}}
+function createBoxes(amount) {
+  for (let i = 1; i <= amount; i += 1){
+    markup += `<div 
+    class = "js-item"
+    width = 30px+${size}
+    height = 30px+${size}
+    backgroundColor = getRandomHexColor()>
+    ${i}</div>`
+  }}
 
 console.log(markup);
-divBoxEl.insertAdjacentHTML("afterbegin", markup)
+divBoxEl.insertAdjacentHTML("afterbegin", markup);
