@@ -54,8 +54,8 @@ function createBoxes(amount) {
   for (let i = 1; i <= amount; i += 1){
     markup += `<div 
     class = "js-item"
-    width = 30px+${size}
-    height = 30px+${size}
+    width = 30px + ${size}
+    height = 30px + ${size}
     backgroundColor = getRandomHexColor()>
     ${i}</div>`
   }}
