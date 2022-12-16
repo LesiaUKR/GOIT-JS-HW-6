@@ -43,26 +43,28 @@ console.log(createBtn);
 const destroyBtn = document.querySelector("[data-destroy]");
 console.log(destroyBtn);
 
-createBtn.addEventListener('click', createBoxes);
+createBtn.addEventListener('click', onCreateBtnClick);
 destroyBtn.addEventListener('click', destroyBoxes);
 
 
-let markup = "";
-let size = "10px";
-const amount = inputEl.value;
+let divCollection = "";
 
-function createBoxes(amount) {
-  for (let i = 1; i <= amount; i += 1){
-    markup += `<div 
-    style = "backgroundColor = ${getRandomHexColor()};
-    width = '30px + ${size}';
-    height = '30px + ${size}';">
-    ${i}</div>`
+let color = getRandomHexColor();
+
+function onCreateBtnClick() {
+  
+  for (let i = 1; i <= Number(inputEl.value); i += 1) {
+    let index = [i] - 1;
+    divCollection += `<div
+    div.style.backgroundColor = ${getRandomHexColor()};
+    div.style.width = ${30 + 10*index}px;
+    div.style.height = ${ 30 + 10 * index } px;>
+    ${i}</div>`;
   }
-console.log(markup);
-}
+  divBoxEl.insertAdjacentHTML("afterbegin", divCollection);
+  console.dir(divCollection);
 
-divBoxEl.insertAdjacentHTML("afterbegin", markup);
+}
 
 function destroyBoxes() {
   divBoxEl.innerHTML = "";
