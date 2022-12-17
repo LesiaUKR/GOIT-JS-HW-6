@@ -56,9 +56,10 @@ function onCreateBtnClick() {
   for (let i = 1; i <= Number(inputEl.value); i += 1) {
     let index = [i] - 1;
     divCollection += `<div
-    div.style.backgroundColor = ${getRandomHexColor()};
-    div.style.width = ${30 + 10*index}px;
-    div.style.height = ${ 30 + 10 * index } px;>
+    style=
+    "width: ${30 + 10 * index}px; 
+    height: ${30 + 10 * index}px; 
+    background-color: ${color};">
     ${i}</div>`;
   }
   divBoxEl.insertAdjacentHTML("afterbegin", divCollection);
@@ -70,3 +71,8 @@ function destroyBoxes() {
   divBoxEl.innerHTML = "";
  console.log("це видалення колекції div");
 }
+
+
+    // div.style.backgroundColor = ${getRandomHexColor()};
+    // div.style.width = ${30 + 10*index}px;
+    // div.style.height = ${ 30 + 10 * index } px;
